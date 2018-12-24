@@ -6,6 +6,24 @@
   <title>Stencil Component Starter</title>
   <script src="/build/mycomponent.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyBnzynYPKsPxHrXRewh7Mc6PJ1vOCK0rvc",
+      authDomain: "todos-3d414.firebaseapp.com",
+      databaseURL: "https://todos-3d414.firebaseio.com",
+      projectId: "todos-3d414",
+      storageBucket: "todos-3d414.appspot.com",
+      messagingSenderId: "1080338205730"
+    });
+
+    const firestore = firebase.firestore();
+    const settings = {
+      timestampsInSnapshots: true
+    };
+    firestore.settings(settings);
+  </script>
+
 </head>
 <body>
 
